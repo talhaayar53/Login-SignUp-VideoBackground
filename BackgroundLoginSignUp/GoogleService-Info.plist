@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>702907234861-6b9rjtmelned9uluh8ep17gt91jo13du.apps.googleusercontent.com</string>
+	<string>142788755871-sntuvbkea3i777kmhqf4m8ch6qkr5e09.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.702907234861-6b9rjtmelned9uluh8ep17gt91jo13du</string>
+	<string>com.googleusercontent.apps.142788755871-sntuvbkea3i777kmhqf4m8ch6qkr5e09</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCdn6muqXDWGQpE4vggJVOyial1Xe_T8u4</string>
+	<string>AIzaSyBijhIodLDmZABOQ_-BbSK4uYkhg3tCUeY</string>
 	<key>GCM_SENDER_ID</key>
-	<string>702907234861</string>
+	<string>142788755871</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.talha.videoBackground</string>
+	<string>com.Talha.LoginSignUp</string>
 	<key>PROJECT_ID</key>
-	<string>video-background-cb2d3</string>
+	<string>login-signup-4851c</string>
 	<key>STORAGE_BUCKET</key>
-	<string>video-background-cb2d3.appspot.com</string>
+	<string>login-signup-4851c.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:702907234861:ios:a3fec213203c9fdc</string>
+	<string>1:142788755871:ios:df53d43495f57ce5</string>
 	<key>DATABASE_URL</key>
-	<string>https://video-background-cb2d3.firebaseio.com</string>
+	<string>https://login-signup-4851c.firebaseio.com</string>
 </dict>
 </plist>

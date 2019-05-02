@@ -15,7 +15,7 @@
 		AB472C1C2182FEBC002DA517 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB472C1A2182FEBC002DA517 /* LaunchScreen.storyboard */; };
 		AB472C2621830110002DA517 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB472C2521830110002DA517 /* LoginViewController.swift */; };
 		AB472C2821830204002DA517 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB472C2721830204002DA517 /* SignUpViewController.swift */; };
-		AB472C2A21830609002DA517 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB472C2921830609002DA517 /* GoogleService-Info.plist */; };
+		ABCE7FF02185ABD20094F8C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABCE7FEF2185ABD20094F8C2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		AB472C1D2182FEBC002DA517 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB472C2521830110002DA517 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AB472C2721830204002DA517 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		AB472C2921830609002DA517 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ABCE7FEF2185ABD20094F8C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D767B48389F6B120454FF666 /* Pods-BackgroundLoginSignUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundLoginSignUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundLoginSignUp/Pods-BackgroundLoginSignUp.debug.xcconfig"; sourceTree = "<group>"; };
 		FF75D18E243B4538BD69F4DA /* Pods-BackgroundLoginSignUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundLoginSignUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundLoginSignUp/Pods-BackgroundLoginSignUp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,7 +92,7 @@
 				AB472C1A2182FEBC002DA517 /* LaunchScreen.storyboard */,
 				AB472C1D2182FEBC002DA517 /* Info.plist */,
 				AB472C152182FEBB002DA517 /* BackgroundLoginSignUp.xcdatamodeld */,
-				AB472C2921830609002DA517 /* GoogleService-Info.plist */,
+				ABCE7FEF2185ABD20094F8C2 /* GoogleService-Info.plist */,
 			);
 			path = BackgroundLoginSignUp;
 			sourceTree = "<group>";
@@ -109,6 +109,7 @@
 				AB472C082182FEBB002DA517 /* Frameworks */,
 				AB472C092182FEBB002DA517 /* Resources */,
 				B14F3AA8D8C95B0CE94A352E /* [CP] Embed Pods Frameworks */,
+				3A04D83704AC8F4B42F340A9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,8 +158,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABCE7FF02185ABD20094F8C2 /* GoogleService-Info.plist in Resources */,
 				AB472C1C2182FEBC002DA517 /* LaunchScreen.storyboard in Resources */,
-				AB472C2A21830609002DA517 /* GoogleService-Info.plist in Resources */,
 				AB472C192182FEBC002DA517 /* Assets.xcassets in Resources */,
 				AB472C142182FEBB002DA517 /* Main.storyboard in Resources */,
 			);
@@ -167,6 +168,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3A04D83704AC8F4B42F340A9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundLoginSignUp/Pods-BackgroundLoginSignUp-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundLoginSignUp/Pods-BackgroundLoginSignUp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7186F1B7E56782CF94A67E5F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -198,7 +221,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundLoginSignUp/Pods-BackgroundLoginSignUp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -207,7 +237,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -381,7 +418,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Talha.BackgroundLoginSignUp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Talha.LoginSignUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -400,7 +437,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Talha.BackgroundLoginSignUp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Talha.LoginSignUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

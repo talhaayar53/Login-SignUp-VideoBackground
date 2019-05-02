@@ -7,7 +7,12 @@
 		<key>BackgroundLoginSignUp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>14</integer>
+		</dict>
+		<key>BackgroundLoginSignUp.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
 		</dict>
 	</dict>
 </dict>

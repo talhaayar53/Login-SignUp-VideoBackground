@@ -7,7 +7,9 @@ target 'BackgroundLoginSignUp' do
 pod 'SkyFloatingLabelTextField', '~> 3.0'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
-
+ pod 'FacebookCore'
+  pod 'FacebookLogin'
+pod 'GoogleSignIn'
   # Pods for BackgroundLoginSignUp
 
 end

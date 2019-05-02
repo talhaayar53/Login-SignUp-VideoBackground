@@ -13,23 +13,30 @@ import SkyFloatingLabelTextField
 import Firebase
 import FirebaseAuth
 import FirebaseCore
+import GoogleSignIn
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GIDSignInUIDelegate {
+    
+    
+    
     @IBOutlet weak var passwordTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextFieldWithIcon!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var blackView: UIView!
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var signUpLabel: UILabel!
+    
     var player = AVPlayer()
     let videoURL = URL(string: "https://video.twimg.com/tweet_video/DqP1dUTW4AIxTdA.mp4")
     
     
     override func viewDidLoad() {
+        
         player = AVPlayer(url: videoURL!)
         videoBackround()
         signUp()
+     
     }
     
     @IBAction func loginButton(_ sender: Any) {
@@ -56,6 +63,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func continueWithFBButton(_ sender: Any) {
+       
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -98,4 +106,38 @@ class ViewController: UIViewController {
         
     }
     
-}
+  
+    
+   
+    @IBAction func googleButton(_ sender: Any) {
+       
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
+        
+        
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        
+        if error != nil {
+            let alert = UIAlertController(title: "ERROR", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "Done", style: UIAlertAction.Style.cancel, handler: nil)
+            alert.addAction(okButton)
+            self.present(alert, animated: true, completion: nil)
+        } else {
+           
+            self.performSegue(withIdentifier: "successLogin", sender: nil)
+           
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+       Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+           print("success")
+                
+            }
+        }
+    }
+    
+

@@ -12,6 +12,7 @@ import Firebase
 import FirebaseAuth
 import AVKit
 import AVFoundation
+import GoogleSignIn
 
 class SignUpViewController: UIViewController {
     @IBOutlet weak var toLogin: UILabel!
@@ -99,5 +100,7 @@ class SignUpViewController: UIViewController {
         player.play()
         playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         
+    }
+    @IBAction func googleButton(_ sender: Any) {
     }
 }
